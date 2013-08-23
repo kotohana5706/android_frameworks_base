@@ -19,4 +19,10 @@
     <string name="status_bar_recent_lock_item_title">Lock</string>
     <!-- Title shown in recents popup for unlocking an app from being cleared -->
     <string name="status_bar_recent_unlock_item_title">Unlock</string>
+    
+    <!-- Title shown in recents popup for showing app in floating mode --> 
+    <string name="status_bar_recent_floating_item_title">Floating mode</string> 
+ 
+    <!-- Title shown in notification popup for launching notification in floating mode -->
+    <string name="status_bar_notification_floating_item_title">Floating mode</string>    
 </resources>
