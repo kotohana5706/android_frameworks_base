@@ -41,7 +41,7 @@
             android:layout_height="match_parent"
             android:fadingEdge="horizontal"
             android:scrollbars="none"
-            android:layout_gravity="right"
+            android:layout_gravity="left"
             android:fadingEdgeLength="@dimen/status_bar_recents_scroll_fading_edge_length">
 
             <LinearLayout android:id="@+id/recents_linear_layout"
@@ -58,6 +58,7 @@
         <ImageView
             android:id="@+id/recents_clear"
             android:clickable="true"
+	    android:layout_marginBottom="7dp"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:scaleType="center"
