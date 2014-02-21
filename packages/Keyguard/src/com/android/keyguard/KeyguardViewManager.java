@@ -97,11 +97,6 @@ public class KeyguardViewManager {
     // Timeout used for keypresses
     static final int DIGIT_PRESS_WAKE_MILLIS = 5000;
 
-    private static final int ROTATE_0 = 0;
-    private static final int ROTATE_90 = 1;
-    private static final int ROTATE_180 = 2;
-    private static final int ROTATE_270 = 3;
-
     private final Context mContext;
     private final ViewManager mViewManager;
     private final KeyguardViewMediator.ViewMediatorCallback mViewMediatorCallback;
@@ -113,7 +108,6 @@ public class KeyguardViewManager {
     private KeyguardHostView mKeyguardView;
 
     private boolean mScreenOn = false;
-    private boolean mRotated = false;
     private LockPatternUtils mLockPatternUtils;
 
     private boolean mUnlockKeyDown = false;
@@ -290,29 +284,6 @@ public class KeyguardViewManager {
         private final Drawable mBackgroundDrawable = new Drawable() {
             @Override
             public void draw(Canvas canvas) {
-                if (!mRotated && mBlurredImage != null) {
-                    int rotation = mKeyguardView.getDisplay().getRotation();
-                    switch(rotation){
-                        case ROTATE_0:
-                        case ROTATE_90:
-                        case ROTATE_270:
-                            mBlurredImage = rotateBmp(mBlurredImage,
-                                                            mLastRotation - (rotation * 90));
-                            mLastRotation = rotation * 90;
-                            break;
-                        case ROTATE_180:
-                            mBlurredImage = rotateBmp(mBlurredImage,
-                                                            mLastRotation - (rotation * 180));
-                            mLastRotation = rotation * 180;
-                            break;
-                    }
-                    mRotated = true;
-                    setCustomBackground(new BitmapDrawable(mContext.getResources(),
-                                            mBlurredImage));
-                    updateShowWallpaper(false);
-                } else {
-                    mRotated = false;
-                }
                 drawToCanvas(canvas, mCustomBackground);
             }
 
@@ -724,6 +695,9 @@ public class KeyguardViewManager {
         mKeyguardHost.restoreHierarchyState(mStateContainer);
 
         if (mBlurredImage != null) {
+            int currentRotation = mKeyguardView.getDisplay().getRotation() * 90;
+            mBlurredImage = rotateBmp(mBlurredImage, mLastRotation - currentRotation);
+            mLastRotation = currentRotation;
             setCustomBackground(mBlurredImage);
         }
     }
