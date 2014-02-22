@@ -3141,6 +3141,12 @@ public final class Settings {
 		 */
         public static final String OVERSCROLL_EFFECT = "overscroll_effect";
 
+       /**
+        * ToastAnimation
+        * @hide
+        */
+        public static final String TOAST_ANIMATION = "toast_animation";
+
         /**
          * Sets the overscroller weight (edge bounce effect on lists)
          * @hide
