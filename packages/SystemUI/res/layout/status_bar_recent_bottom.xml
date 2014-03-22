@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/status_bottom_title"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="bottom"
     android:orientation="vertical" 
-    android:src="#00000000">
+    android:background="@drawable/recent_apps_background">
 
         <ImageView
             android:id="@+id/recents_clear"
-	    android:layout_marginBottom="7dp"
+	    android:layout_marginBottom="17dp"
+            android:layout_marginLeft="145dp"
             android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

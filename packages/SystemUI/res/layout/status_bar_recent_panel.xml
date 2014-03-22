@@ -51,19 +51,12 @@
 
         </com.android.systemui.recent.RecentsHorizontalScrollView>
 
-        <include layout="@layout/status_bar_recent_title"
-        android:id="@+id/recents_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-	android:layout_marginTop="16dip"
-        android:layout_gravity="top|center"     />
-
         <include layout="@layout/status_bar_recent_bottom"
         android:id="@+id/recents_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-	android:layout_marginBottom="50dip"
-        android:layout_gravity="bottom|center"     />
+	android:layout_marginTop="100dip"
+        android:layout_gravity="top|center"     />
     </FrameLayout>
 
     <include layout="@layout/status_bar_no_recent_apps"

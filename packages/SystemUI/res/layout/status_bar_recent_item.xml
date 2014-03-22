@@ -27,7 +27,7 @@
     android:clipChildren="false"
     android:importantForAccessibility="no">
 
-    <LinearLayout android:id="@+id/recent_item"
+    <RelativeLayout android:id="@+id/recent_item"
         android:orientation="vertical"
         android:layout_gravity="center_horizontal"
         android:layout_height="wrap_content"
@@ -67,21 +67,6 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:clipChildren="false">
-            <ImageView android:id="@+id/app_icon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginTop="@dimen/status_bar_recents_app_icon_top_margin"
-                android:maxWidth="@dimen/status_bar_recents_app_icon_max_width"
-                android:maxHeight="@dimen/status_bar_recents_app_icon_max_height"
-                android:scaleType="centerInside"
-                android:adjustViewBounds="true"
-                android:visibility="invisible"
-                android:shadowColor="#40000000"
-                android:shadowDx="0"
-                android:shadowDy="2"
-                android:shadowRadius="5"
-                />
             <TextView android:id="@+id/app_label"
                 android:layout_width="@dimen/status_bar_recents_app_label_width"
                 android:layout_height="wrap_content"
@@ -95,12 +80,23 @@
                 android:singleLine="true"
                 android:ellipsize="marquee"
                 android:textSize="12sp"
+                android:textColor="#00FFFFFF"
+                android:importantForAccessibility="no"
+                />
+            <ImageView android:id="@+id/app_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:maxWidth="@dimen/status_bar_recents_app_icon_max_width"
+                android:maxHeight="@dimen/status_bar_recents_app_icon_max_height"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:visibility="invisible"
                 android:shadowColor="#40000000"
                 android:shadowDx="0"
                 android:shadowDy="2"
                 android:shadowRadius="5"
-                android:textColor="@color/status_bar_recents_app_label_color"
-                android:importantForAccessibility="no"
                 />
         </LinearLayout>
 
@@ -118,5 +114,5 @@
             android:singleLine="true"
             android:ellipsize="marquee"
         />
-    </LinearLayout>
+    </RelativeLayout>
 </FrameLayout>
