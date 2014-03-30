@@ -2082,4 +2082,6 @@
 
   <!-- for wifi auto connection -->
   <java-symbol type="bool" name="wifi_autocon" />
+  <java-symbol type="dimen" name="glowpad_notification_font_size" />
+  <java-symbol type="dimen" name="glowpad_notification_text_radius" />
 </resources>

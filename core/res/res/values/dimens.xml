@@ -372,4 +372,10 @@
     <!-- Size of the icons/inner icons of the Quick launch shortcuts -->
     <dimen name="navigation_ring_icon_size">88dp</dimen>
     <dimen name="navigation_ring_activity_icon_size">36dp</dimen>
+
+    <!-- Font size for notification text -->
+    <dimen name="glowpad_notification_font_size">12dp</dimen>
+    <!-- Radius of notification text -->
+    <dimen name="glowpad_notification_text_radius">60dp</dimen>
+
 </resources>
