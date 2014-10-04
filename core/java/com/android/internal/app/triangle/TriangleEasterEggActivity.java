@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2010 The Android Open Source Project
- * Copyright (C) 2013-2014 The CyanogenMod Project
+ * Copyright (C) 2014 Team Triangles ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.internal.app;
+package com.android.internal.app.triangle;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -42,18 +41,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class PlatLogoActivity extends Activity {
+public class TriangleEasterEggActivity extends Activity {
     FrameLayout mContent;
     int mCount;
     final Handler mHandler = new Handler();
-    private boolean mIsCM;
-    static final int BGCOLOR = 0xffed1d24;
+    private boolean mIsTriangle;
+    static final int BGCOLOR = 0xff1c1c1c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mIsCM = getIntent().hasExtra("is_cm");
+        mIsTriangle = getIntent().hasExtra("is_triangle");
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
@@ -73,8 +72,8 @@ public class PlatLogoActivity extends Activity {
         int p = (int) (20 * metrics.density);
 
         final ImageView logo = new ImageView(this);
-        logo.setImageResource(mIsCM
-                ? com.android.internal.R.drawable.platlogo
+        logo.setImageResource(mIsTriangle
+				? com.android.internal.R.drawable.tta_platlogo
                 : com.android.internal.R.drawable.platlogo);
         logo.setPadding(p, 0, p, 0);
         logo.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
@@ -87,25 +86,25 @@ public class PlatLogoActivity extends Activity {
         final TextView letter = new TextView(this);
 
         letter.setTypeface(bold);
-        letter.setTextSize(mIsCM ? 150 : 300);
+        letter.setTextSize(100);
         letter.setTextColor(0xFFFFFFFF);
         letter.setGravity(Gravity.CENTER);
-        letter.setText(mIsCM ? "CM" : "K");
+        letter.setText(mIsTriangle ? "TTA" : "TTA");
 
-        String cmVersion = SystemProperties.get("ro.cm.version");
-        if (cmVersion != null) {
-            cmVersion = cmVersion.replaceAll("([0-9\\.]+?)-.*", "$1");
+        String triangleVersion = SystemProperties.get("ro.triangle.display.version");
+        if (triangleVersion != null) {
+            triangleVersion = triangleVersion.replaceAll("([0-9\\.]+?)-.*", "$1");
         }
 
         p = (int) (4 * metrics.density);
 
         final TextView tv = new TextView(this);
-        tv.setTypeface(light);
-        tv.setTextSize(30);
+        tv.setTypeface(bold);
+        tv.setTextSize(26);
         tv.setPadding(p, p, p, p);
         tv.setTextColor(0xFFFFFFFF);
         tv.setGravity(Gravity.CENTER);
-        tv.setText(mIsCM ? "CyanogenMod " + cmVersion : "ANDROID " + Build.VERSION.RELEASE);
+        tv.setText(mIsTriangle ? "TrianglesROM " + triangleVersion : "CyanogenMod ");
         tv.setVisibility(View.INVISIBLE);
 
         mContent.addView(bg);
@@ -123,7 +122,7 @@ public class PlatLogoActivity extends Activity {
             @Override
             public void onClick(View v) {
                 clicks++;
-                if (clicks >= 6) {
+                if (clicks >= 3) {
                     mContent.performLongClick();
                     return;
                 }
@@ -179,10 +178,10 @@ public class PlatLogoActivity extends Activity {
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                             | Intent.FLAG_ACTIVITY_CLEAR_TASK
                             | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
-                        .putExtra("is_cm", mIsCM)
+                        .putExtra("is_triangle", mIsTriangle)
                         .addCategory("com.android.internal.category.PLATLOGO"));
                 } catch (ActivityNotFoundException ex) {
-                    android.util.Log.e("PlatLogoActivity", "Couldn't catch a break.");
+                    android.util.Log.e("TriangleEasterEggActivity", "Couldn't catch a break.");
                 }
                 finish();
                 return true;
