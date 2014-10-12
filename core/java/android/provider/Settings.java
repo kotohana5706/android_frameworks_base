@@ -3135,6 +3135,33 @@ public final class Settings {
          */
         public static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
 
+		/**
+		 * Sets the overscroller effect
+		 * @hide
+		 */
+        public static final String OVERSCROLL_EFFECT = "overscroll_effect";
+
+        /**
+         * Sets the overscroller weight (edge bounce effect on lists)
+         * @hide
+         */
+        public static final String OVERSCROLL_WEIGHT = "overscroll_weight";
+
+
+		/**
+		 * Determine friction of scrolling
+		 *
+		 * @hide
+		 */
+		public static final String SCROLL_FRICTION = "scroll_friction";
+
+		/**
+		 * Determine custom fling velocity
+		 *
+		 * @hide
+		 */
+		public static final String CUSTOM_FLING_VELOCITY = "custom_fling_velocity";
+
         /**
          * Display style of the status bar battery information
          * 0: Display the battery an icon in portrait mode
