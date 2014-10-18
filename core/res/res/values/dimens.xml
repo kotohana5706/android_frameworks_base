@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 /* //device/apps/common/assets/res/any/dimens.xml
 **
@@ -162,7 +162,7 @@
     <dimen name="search_view_preferred_width">320dip</dimen>
 
     <!-- Dialog title height -->
-    <dimen name="alert_dialog_title_height">64dip</dimen>
+    <dimen name="alert_dialog_title_height">48dip</dimen>
     <!-- Dialog button bar height -->
     <dimen name="alert_dialog_button_bar_height">48dip</dimen>
 

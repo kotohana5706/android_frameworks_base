@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
 ** Copyright 2011, The Android Open Source Project
@@ -30,10 +30,6 @@ enabled.
         android:paddingStart="16dip"
         android:paddingEnd="16dip"
         android:gravity="center_vertical|start" />
-    <View android:id="@+id/titleDivider"
-            android:layout_width="match_parent"
-            android:layout_height="2dip"
-            android:background="@color/dialog_title_divider" />
     <FrameLayout
         android:layout_width="match_parent" android:layout_height="wrap_content"
         android:layout_weight="1"

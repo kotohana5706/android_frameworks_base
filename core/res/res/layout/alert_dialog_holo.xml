@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
 ** Copyright 2010, The Android Open Source Project
@@ -56,11 +56,6 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="viewStart" />
         </LinearLayout>
-        <View android:id="@+id/titleDivider"
-            android:layout_width="match_parent"
-            android:layout_height="2dip"
-            android:visibility="gone"
-            android:background="@color/dialog_title_divider" />
         <!-- If the client uses a customTitle, it will be added here. -->
     </LinearLayout>
 
@@ -80,8 +75,8 @@
                 android:layout_height="wrap_content"
                 android:paddingStart="16dip"
                 android:paddingEnd="16dip"
-                android:paddingTop="8dip"
-                android:paddingBottom="8dip"/>
+                android:paddingTop="16dip"
+                android:paddingBottom="16dip"/>
         </ScrollView>
     </LinearLayout>
 

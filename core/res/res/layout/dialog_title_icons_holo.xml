@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -32,8 +32,8 @@ enabled.
         android:paddingStart="16dip"
         android:paddingEnd="16dip">
         <ImageView android:id="@+id/left_icon"
-            android:layout_width="32dip"
-            android:layout_height="32dip"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
             android:scaleType="fitCenter"
             android:layout_marginEnd="8dip" />
         <TextView android:id="@android:id/title"
@@ -42,17 +42,12 @@ enabled.
             android:layout_height="wrap_content"
             android:layout_weight="0" />
         <ImageView android:id="@+id/right_icon"
-            android:layout_width="32dip"
-            android:layout_height="32dip"
+            android:layout_width="25dip"
+            android:layout_height="25dip"
             android:scaleType="fitCenter"
             android:layout_marginStart="8dip" />
     </LinearLayout>
-
-    <View android:id="@+id/titleDivider"
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:background="@color/dialog_title_divider" />
-
+	
     <FrameLayout
         android:layout_width="match_parent" android:layout_height="wrap_content"
         android:layout_weight="1"
