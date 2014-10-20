@@ -110,6 +110,8 @@ public class RecentsPanelView extends FrameLayout implements OnItemClickListener
     private ImageView mClearRecents;
     private ImageView mProtectedApps;
 
+    private RecentsActivity mRecentsActivity;
+
 	private static Set<Integer> sLockedTasks = new HashSet<Integer>();
 
     public static interface RecentsScrollView {
