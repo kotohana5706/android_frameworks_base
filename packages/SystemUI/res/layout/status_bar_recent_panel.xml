@@ -64,14 +64,6 @@
                 android:layout_height="50dp"
                 android:scaleType="center"
                 android:src="@drawable/ic_protected_apps" />
-
-            <ImageView
-                android:id="@+id/recents_clear"
-                android:clickable="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_recents_clear" />
         </LinearLayout>
 
         <include layout="@layout/status_bar_recent_bottom"

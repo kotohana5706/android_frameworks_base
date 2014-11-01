@@ -1,5 +1,6 @@
 /*
- * Copyright (C) 2011 The Android Open Source Project
+ * Copyright (C) 2012 Android Open Source Project
+ * Copyright (C) 2014 Team Triangles ROM Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -961,13 +962,15 @@ public class RecentsPanelView extends FrameLayout implements OnItemClickListener
                         ((ViewGroup) mRecentsContainer).removeViewInLayout(selectedView);
                     } else {
                         throw new IllegalStateException("Oops, no tag on view " + selectedView);
-                    }
+                        } 
                 } else {
                     return false;
                 }
-                return true;
+                }
+			return true;
             }
-        });
+        }
+        );
         popup.setOnDismissListener(new PopupMenu.OnDismissListener() {
             public void onDismiss(PopupMenu menu) {
                 thumbnailView.setSelected(false);

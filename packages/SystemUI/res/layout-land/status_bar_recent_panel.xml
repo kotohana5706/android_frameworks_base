@@ -55,15 +55,6 @@
 
         </com.android.systemui.recent.RecentsHorizontalScrollView>
 
-        <ImageView
-            android:id="@+id/recents_clear"
-            android:clickable="true"
-	    android:layout_marginBottom="7dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:scaleType="center"
-            android:layout_gravity="top|right"
-            android:src="@drawable/ic_recents_clear" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,13 +69,16 @@
                 android:scaleType="center"
                 android:src="@drawable/ic_protected_apps" />
 
-            <ImageView
-                android:id="@+id/recents_clear"
-                android:clickable="true"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:scaleType="center"
-                android:src="@drawable/ic_recents_clear" />
+		    <ImageView
+		        android:id="@+id/recents_clear"
+		        android:clickable="true"
+			android:layout_marginBottom="7dp"
+		        android:layout_width="50dp"
+		        android:layout_height="50dp"
+		        android:scaleType="center"
+		        android:layout_gravity="top|right"
+		        android:src="@drawable/ic_recents_clear" />
+
         </LinearLayout>
 
     </FrameLayout>
