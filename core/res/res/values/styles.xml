@@ -1675,9 +1675,6 @@ please see styles_device_defaults.xml.
         <item name="android:paddingStart">0dip</item>
         <item name="android:paddingEnd">0dip</item>
         <item name="android:paddingBottom">0dip</item>
-        <item name="divider">?android:attr/dividerVertical</item>
-        <item name="showDividers">middle</item>
-        <item name="dividerPadding">12dip</item>
         <item name="background">@null</item>
     </style>
 
@@ -1687,7 +1684,6 @@ please see styles_device_defaults.xml.
 
     <style name="Holo.ButtonBar.AlertDialog">
         <item name="android:background">@null</item>
-        <item name="android:dividerPadding">0dp</item>
     </style>
 
     <style name="Widget.Holo.TextView" parent="Widget.TextView">
@@ -1975,7 +1971,6 @@ please see styles_device_defaults.xml.
     </style>
 
     <style name="Widget.Holo.ButtonBar">
-        <item name="android:divider">?android:attr/dividerVertical</item>
     </style>
 
     <style name="Widget.Holo.ButtonBar.Button">
@@ -2115,7 +2110,6 @@ please see styles_device_defaults.xml.
 
     <style name="Holo.Light.ButtonBar.AlertDialog">
         <item name="android:background">@null</item>
-        <item name="android:dividerPadding">0dp</item>
     </style>
 
     <style name="Holo.Light.SegmentedButton" parent="SegmentedButton">
