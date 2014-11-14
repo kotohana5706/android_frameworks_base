@@ -3081,6 +3081,14 @@ public final class Settings {
          * @hide
          */
         public static final String NAV_BUTTONS = "nav_buttons";
+        
+        
+       	/**
+         * Wether navigation bar is enabled or not
+         * @hide
+         */
+        public static final String NAVIGATION_BAR_SHOW = "navigation_bar_show";
+
 
         /**
          * Whether navigation bar is placed on the left side in landscape mode
